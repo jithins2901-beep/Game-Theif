@@ -1,4 +1,4 @@
-# Stealth Heist — AIML Final-Year Project
+# Stealth Heist
 
 A 2D top-down stealth and heist game with AI-driven guards (finite state
 machine, field-of-view vision cone, A* pathfinding). Built with Python and
