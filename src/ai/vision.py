@@ -96,7 +96,7 @@ class VisionCone:
             col = int(x // TILE_SIZE)
             row = int(y // TILE_SIZE)
 
-            if self.grid.is_wall(col, row):
+            if self.grid.blocks_sight(col, row):
                 # Step back one step so endpoint is just before the wall
                 return (x - dx * FOV_STEP, y - dy * FOV_STEP)
 
@@ -144,7 +144,7 @@ class VisionCone:
         for _ in range(steps):
             col = int(rx // TILE_SIZE)
             row = int(ry // TILE_SIZE)
-            if self.grid.is_wall(col, row):
+            if self.grid.blocks_sight(col, row):
                 return False
             rx += step_x
             ry += step_y

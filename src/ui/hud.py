@@ -83,9 +83,9 @@ class HUD:
     def _draw_controls_hint(self, surface: pygame.Surface) -> None:
         """Small hint at the bottom-center so new players know the controls."""
         hint = self.font_sm.render(
-            "WASD / Arrow keys — move     ESC — quit     Reach the GREEN tile!",
+            "WASD / Arrows — move     SPACE — open/close door     ESC — quit     Reach the GREEN tile!",
             True,
-            (100, 100, 120),
+            (90, 90, 110),
         )
         x = (surface.get_width() - hint.get_width()) // 2
         y = surface.get_height() - hint.get_height() - 6

@@ -50,7 +50,7 @@ def find_path(
         return []
 
     # If either endpoint is a wall, bail out immediately
-    if grid.is_wall(*start) or grid.is_wall(*goal):
+    if grid.blocks_movement(*start) or grid.blocks_movement(*goal):
         return []
 
     # --- Open set: min-heap of (f, g, (col, row)) ---
@@ -75,7 +75,7 @@ def find_path(
         for dc, dr in _DIRS:
             neighbour = (current[0] + dc, current[1] + dr)
 
-            if grid.is_wall(*neighbour):
+            if grid.blocks_movement(*neighbour):
                 continue
 
             tentative_g = g + 1  # every step costs 1
